@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- see n say storymaker
+       cycles through word columns and builds a silly sentence -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>see n say storymaker</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>see n say storymaker</h1>
+<p>click each button to cycle through the words, then hit build story when youre ready</p>
+
+<main class="toy">
+
+  <p class="hint">press the coloured buttons to change each word. happy with it? move to the next one!</p>
+
+  <section class="cols">
+
+    <div class="col" id="col0">
+      <div class="col-top">1. who?</div>
+      <div class="wordtext" id="wt0">The turkey</div>
+      <div class="dots" id="dt0"></div>
+      <button class="cycle-btn" onclick="cycleWord(0)">next</button>
+    </div>
+
+    <div class="col" id="col1">
+      <div class="col-top">2. did what?</div>
+      <div class="wordtext" id="wt1">sat on</div>
+      <div class="dots" id="dt1"></div>
+      <button class="cycle-btn" onclick="cycleWord(1)">next</button>
+    </div>
+
+    <div class="col" id="col2">
+      <div class="col-top">3. what kind?</div>
+      <div class="wordtext" id="wt2">a funny</div>
+      <div class="dots" id="dt2"></div>
+      <button class="cycle-btn" onclick="cycleWord(2)">next</button>
+    </div>
+
+    <div class="col" id="col3">
+      <div class="col-top">4. what?</div>
+      <div class="wordtext" id="wt3">goat</div>
+      <div class="dots" id="dt3"></div>
+      <button class="cycle-btn" onclick="cycleWord(3)">next</button>
+    </div>
+
+    <div class="col" id="col4">
+      <div class="col-top">5. where?</div>
+      <div class="wordtext" id="wt4">on the moon</div>
+      <div class="dots" id="dt4"></div>
+      <button class="cycle-btn" onclick="cycleWord(4)">next</button>
+    </div>
+
+  </section>
+
+  <div class="preview">
+    <span class="p0" id="pw0">The turkey</span>
+    <span class="p1" id="pw1">sat on</span>
+    <span class="p2" id="pw2">a funny</span>
+    <span class="p3" id="pw3">goat</span>
+    <span class="p4" id="pw4">on the moon</span>
+  </div>
+
+  <div class="btns">
+    <button class="btn red"  onclick="showStory()">build story!</button>
+    <button class="btn purp" onclick="randomStory()">surprise!</button>
+    <button class="btn blue" onclick="playbackStory()">read aloud</button>
+    <button class="btn teal" id="altbtn" onclick="switchMode()">alt words</button>
+    <button class="btn grey" onclick="resetToy()">reset</button>
+  </div>
+
+  <div id="storybox">
+    <h2>your story!</h2>
+    <p id="storyout"></p>
+  </div>
+
+</main>
+
+<footer>a web tribute to the mattel see n say storymaker</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
