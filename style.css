@@ -258,3 +258,9 @@ footer {
   color: #92400e;
   font-weight: 700;
 }
+
+/* responsive, stacks columns on small screens */
+@media (max-width: 560px) {
+  .cols { grid-template-columns: 1fr 1fr; }
+  .col:nth-child(5) { grid-column: 1 / -1; }
+}
