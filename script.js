@@ -131,3 +131,4 @@ function resetToy() {
 }
 
 setup();
+
